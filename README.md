@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+  <img src="preview.png" alt="Flatcap Firefox Preview"/>
+</p>
+
+<p align="center">
   Flat Cap is a dark, minimalist, and eye-friendly theme meticulously crafted to provide a comfortable and focused experience.
   <br>
   <strong>Deep Twilight colors adapted for Mozilla Firefox.</strong>
