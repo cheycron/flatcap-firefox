@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "version": "1.0.2",
+  "name": "Flatcap",
+  "description": "A dark, minimalist, and eye-friendly theme based on the Flatcap palette. Deep Twilight colors for focused engineering.",
+  "author": "Cheycron",
+  "icons": {
+    "48": "icon-48.png",
+    "96": "icon-96.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "flatcap-theme@cheycron.com",
+      "strict_min_version": "109.0"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#121418",
+      "tab_background_text": "#bfc2ca",
+      "toolbar": "#191c22",
+      "bookmark_text": "#cbced5",
+      "toolbar_field": "#23272f",
+      "toolbar_field_text": "#cbced5",
+      "toolbar_field_border": "#303540",
+      "toolbar_field_focus": "#23272f",
+      "toolbar_field_border_focus": "#81a1c1",
+      "tab_line": "#5e81ac",
+      "tab_loading": "#5e81ac",
+      "tab_selected": "#191c22",
+      "tab_background_separator": "#303540",
+      "icons": "#cbced5",
+      "icons_attention": "#81a1c1",
+      "popup": "#191c22",
+      "popup_text": "#cbced5",
+      "popup_border": "#121418",
+      "popup_highlight": "#81a1c1",
+      "popup_highlight_text": "#121418",
+      "button_background_hover": "#23272f",
+      "button_background_active": "#303540",
+      "ntp_background": "#121418",
+      "ntp_text": "#cbced5",
+      "sidebar": "#121418",
+      "sidebar_text": "#cbced5",
+      "sidebar_border": "#191c22"
+    }
+  }
+}
