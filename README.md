@@ -14,6 +14,13 @@
 
 ## Installation
 
+### 🦊 Official Firefox Add-on
+You can install the theme directly from the official store:
+**[Install Flatcap on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/flatcap/)**
+
+> [!NOTE]
+> *If the link is not yet active, it is because the theme is currently undergoing Mozilla's review process.*
+
 ### Manual Installation (Development Mode)
 
 Since this theme is currently in development or maintained locally, you can install it using Firefox's debugging tools:
