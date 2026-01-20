@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "version": "1.0.2",
+  "version": "1.1.0",
   "name": "Flatcap",
-  "description": "A dark, minimalist, and eye-friendly theme based on the Flatcap palette. Deep Twilight colors for focused engineering.",
-  "author": "Cheycron",
+  "description": "A dark, minimalist, and eye-friendly theme based on the Flatcap design system. Deep Twilight colors for a focused browsing experience.",
+  "author": "Leonardo Anibal Chocron",
   "icons": {
     "48": "icon-48.png",
     "96": "icon-96.png"
@@ -17,32 +17,32 @@
   "theme": {
     "colors": {
       "frame": "#121418",
-      "tab_background_text": "#bfc2ca",
+      "tab_background_text": "#b2b6bf",
       "toolbar": "#191c22",
       "bookmark_text": "#cbced5",
-      "toolbar_field": "#23272f",
+      "toolbar_field": "#121418",
       "toolbar_field_text": "#cbced5",
-      "toolbar_field_border": "#303540",
-      "toolbar_field_focus": "#23272f",
+      "toolbar_field_border": "#2e3440",
+      "toolbar_field_focus": "#121418",
       "toolbar_field_border_focus": "#81a1c1",
-      "tab_line": "#5e81ac",
-      "tab_loading": "#5e81ac",
+      "tab_line": "#81a1c1",
+      "tab_loading": "#81a1c1",
       "tab_selected": "#191c22",
-      "tab_background_separator": "#303540",
+      "tab_background_separator": "#2e3440",
       "icons": "#cbced5",
       "icons_attention": "#81a1c1",
       "popup": "#191c22",
       "popup_text": "#cbced5",
-      "popup_border": "#121418",
-      "popup_highlight": "#81a1c1",
-      "popup_highlight_text": "#121418",
-      "button_background_hover": "#23272f",
-      "button_background_active": "#303540",
+      "popup_border": "#2e3440",
+      "popup_highlight": "#2e3440",
+      "popup_highlight_text": "#e4e6e9",
+      "button_background_hover": "#2e3440",
+      "button_background_active": "#3b4252",
       "ntp_background": "#121418",
       "ntp_text": "#cbced5",
-      "sidebar": "#121418",
+      "sidebar": "#191c22",
       "sidebar_text": "#cbced5",
-      "sidebar_border": "#191c22"
+      "sidebar_border": "#2e3440"
     }
   }
 }
