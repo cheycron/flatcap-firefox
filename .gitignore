@@ -18,3 +18,10 @@ Desktop.ini
 # IDEs
 .vscode/
 .idea/
+
+# Packaging output
+dist/
+
+# Local review material
+.review/
+__pycache__/
