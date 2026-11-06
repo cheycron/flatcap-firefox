@@ -43,7 +43,7 @@ ICON_SIZES = (48, 96, 128)
 STRICT_MIN_VERSION = "109.0"   # Manifest V3 in Firefox starts at 109; dark_theme (68) and color_scheme (100) are older
 DESCRIPTION = ("Quiet precision for Firefox. Flatcap Slate in dark mode and Flatcap Daylight in light mode, "
                "following your system.")
-AUTHOR = "Leonardo Anibal Chocron"
+AUTHOR = "Cheycron Blaine"
 HOMEPAGE = "https://github.com/cheycron/flatcap-firefox"
 GECKO_ID = "flatcap-theme@cheycron.com"
 HEX6 = re.compile(r"^#[0-9A-Fa-f]{6}$")

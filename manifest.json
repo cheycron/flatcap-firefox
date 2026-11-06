@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "name": "Flatcap",
   "description": "Quiet precision for Firefox. Flatcap Slate in dark mode and Flatcap Daylight in light mode, following your system.",
-  "author": "Leonardo Anibal Chocron",
+  "author": "Cheycron Blaine",
   "homepage_url": "https://github.com/cheycron/flatcap-firefox",
   "icons": {
     "48": "icons/icon-48.png",
