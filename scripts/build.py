@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the Flatcap 2.0 theme for Firefox (one add-on: Daylight and Slate).
 
-    python3 scripts/build.py              # write manifest.json and the README blocks
+    python3 scripts/build.py              # write manifest.json and the docs/mapping.md blocks
     python3 scripts/build.py --check      # fail if generated output is stale, an icon is wrong, or contrast misses a target
     python3 scripts/build.py --sync       # refresh src/ and images/logo.png from ../00-Flatcap, then rebuild
     python3 scripts/build.py --contrast   # print the full contrast report
@@ -10,7 +10,7 @@
 Input  : src/theme.json, a versioned copy of the Flatcap 2.0 core (the only source of values).
          scripts/mapping.py, the role mapping (roles only, no hex).
 Outputs: manifest.json   "theme" = Daylight (Firefox in the light scheme), "dark_theme" = Slate (dark scheme)
-         README.md       only the blocks between <!-- build:NAME --> markers
+         docs/mapping.md only the blocks between <!-- build:NAME --> markers (not in the package)
          dist/flatcap-firefox-<version>.zip   (--package; ignored by git)
 
 No hex value is written by hand. Python 3.10+, standard library only. Output is deterministic.
@@ -31,7 +31,7 @@ import mapping as M  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 THEME = ROOT / "src" / "theme.json"
-README = ROOT / "README.md"
+MAPPING_DOC = ROOT / "docs" / "mapping.md"
 MANIFEST = ROOT / "manifest.json"
 DIST = ROOT / "dist"
 CORE = (ROOT / ".." / "00-Flatcap").resolve()
@@ -225,15 +225,15 @@ def md_contrast(theme: dict) -> str:
     return "\n".join(rows)
 
 
-README_BLOCKS = {"mapping": md_mapping, "contrast": md_contrast}
+DOC_BLOCKS = {"mapping": md_mapping, "contrast": md_contrast}
 
 
-def render_readme(theme: dict) -> str:
-    text = README.read_text(encoding="utf-8")
-    for name, fn in README_BLOCKS.items():
+def render_doc(theme: dict) -> str:
+    text = MAPPING_DOC.read_text(encoding="utf-8")
+    for name, fn in DOC_BLOCKS.items():
         pat = re.compile(rf"(<!-- build:{name} -->)\n.*?(<!-- /build:{name} -->)", re.S)
         if not pat.search(text):
-            raise SystemExit(f"error: README.md is missing the build:{name} markers")
+            raise SystemExit(f"error: docs/mapping.md is missing the build:{name} markers")
         text = pat.sub(lambda m: m.group(1) + "\n" + fn(theme) + "\n" + m.group(2), text)
     return text
 
@@ -314,7 +314,7 @@ def main() -> int:
     if upstream.is_file() and upstream.read_bytes() != THEME.read_bytes():
         print("note: src/theme.json differs from ../00-Flatcap (run --sync to refresh)", file=sys.stderr)
 
-    outs = {MANIFEST: dumps(manifest(theme)), README: render_readme(theme)}
+    outs = {MANIFEST: dumps(manifest(theme)), MAPPING_DOC: render_doc(theme)}
     stale = []
     for path, text in outs.items():
         if args.check:
